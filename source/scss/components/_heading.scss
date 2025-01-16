@@ -1,0 +1,17 @@
+.heading {
+  font-family: var(--ff-pr);
+  &-title {
+    line-height: 100%;
+    font-size: clamp(44px, 4vw, 64px);
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: .5rem;
+    display: block;
+  }
+  &-subtitle {
+    font-size: clamp(1rem, 1.125vw, 18px);
+    text-transform: uppercase;
+    color: #817f88;
+    font-weight: 300;
+  }
+}
