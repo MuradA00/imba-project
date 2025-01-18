@@ -1,12 +1,22 @@
 .about {
   --spacing: clamp(24px, 2.5vw, 40px);
 
-  margin-top: 50dvh;
   &-header {
     margin-bottom: clamp(2rem, 4.625vw, 74px);
   }
   &-heading {
     margin-bottom: 2rem;
+  }
+  &-pagination {
+    display: flex;
+    grid-gap: 1rem;
+    position: absolute;
+    width: fit-content !important;
+    height: fit-content;
+    bottom: initial !important;
+    left: initial !important;
+    top: calc(var(--spacing) + clamp(10px, 1.25vw, 20px)) !important;
+    right: var(--spacing) !important;
   }
   &-servers {
     padding-left: var(--spacing) !important;
@@ -26,9 +36,6 @@
 
       border: 4px solid transparent;
       border-right: none;
-      &--active {
-        border-color: #d73139;
-      }
       @include hover {
         border-color: #d73139;
       }
@@ -94,6 +101,7 @@
     padding: 0 !important;
     width: 100%;
     border-right: 2px solid #2c2529;
+    position: relative;
   }
   &-slider {
     &__banner {
@@ -160,8 +168,9 @@
       img {
         width: 100%;
         height: 100%;
-        transition: transform 300ms ease;
-        will-change: transform;
+        transition: all 300ms ease;
+        will-change: transform, filter;
+        filter: grayscale(1);
       }
     }
     &__block {
@@ -176,6 +185,7 @@
       @include hover {
         .about-links__banner img {
           transform: scale(1.1);
+          filter: grayscale(0);
         }
       }
     }

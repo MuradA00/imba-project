@@ -23,6 +23,10 @@ body {
 
   min-height: 100dvh;
   position: relative;
+
+  background-image: url("../../img/home/particlesBackground.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 
 .fade-in {
@@ -50,7 +54,7 @@ main {
   position: relative;
 
   & > * {
-    padding: 5rem 0;
+    padding: clamp(3.5rem, 5vw, 5rem) 0;
   }
 }
 
@@ -267,8 +271,25 @@ fieldset {
   text-align: center;
 }
 
-
-
+.swiper-pagination-bullet {
+  transition: all 400ms ease;
+  border: 3px solid #808080;
+  transform: rotate(45deg);
+  display: block;
+  width: 12px !important;
+  border-radius: 0 !important;
+  height: 12px !important;
+  aspect-ratio: 1;
+  margin: 0 !important;
+  &-active {
+    background-color: #a0262c;
+    border-color: #a0262c;
+  }
+  @include tablet {
+    width: 8px !important;
+    height: 8px !important;
+  }
+}
 
 
 
