@@ -17,6 +17,7 @@
     left: initial !important;
     top: calc(var(--spacing) + clamp(10px, 1.25vw, 20px)) !important;
     right: var(--spacing) !important;
+    z-index: 5;
   }
   &-servers {
     padding-left: var(--spacing) !important;

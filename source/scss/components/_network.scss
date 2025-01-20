@@ -115,11 +115,6 @@
           min-height: var(--offset);
           background-color: #9d262b;
         }
-        &:nth-child(2) {
-          &::before {
-
-          }
-        }
         &::before {
           transform: scale(1.5);
         }

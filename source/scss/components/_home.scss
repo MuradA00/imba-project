@@ -60,6 +60,7 @@
       font-size: clamp(32px, 3.125vw, 50px);
       text-transform: uppercase;
       font-weight: 900;
+      min-width: 92px;
     }
     &__remaining {
       font-size: clamp(14px, 1.125vw, 18px);
@@ -196,6 +197,17 @@
       justify-content: center;
       text-align: center;
       grid-gap: 1rem;
+      margin-top: auto;
+    }
+    &-header {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    &-counter {
+      &__digit {
+        min-width: 56px;
+      }
     }
     &-start {
       min-width: auto;
